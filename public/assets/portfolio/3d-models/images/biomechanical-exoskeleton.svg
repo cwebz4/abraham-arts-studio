@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04080A" />
+      <stop offset="50%" stop-color="#091317" />
+      <stop offset="100%" stop-color="#050C0F" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94FF47" />
+      <stop offset="100%" stop-color="#55C912" />
+    </linearGradient>
+    <radialGradient id="radialCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6EE023" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#6EE023" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Studio Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+  <rect width="1200" height="800" fill="url(#grid)" />
+
+  <!-- Volumetric Center Glow -->
+  <circle cx="600" cy="400" r="384" fill="url(#radialCore)" />
+
+  <!-- Studio Viewport Geometry / Render Grids -->
+  <g stroke="#6EE023" stroke-opacity="0.2" stroke-width="1.2">
+    <!-- Camera Target Crosshairs -->
+    <line x1="550" y1="400" x2="650" y2="400" />
+    <line x1="600" y1="350" x2="600" y2="450" />
+    <circle cx="600" cy="400" r="120" stroke-dasharray="4 8" />
+    <circle cx="600" cy="400" r="220" stroke-opacity="0.1" stroke-dasharray="2 12" />
+    <circle cx="600" cy="400" r="340" stroke-opacity="0.05" />
+  </g>
+
+  <!-- Central 3D Mesh Representation -->
+  
+    <!-- 3D Mech / Cybernetic Sculpture Mesh -->
+    <g transform="translate(400, 220)">
+      <!-- Outer Armor Panels -->
+      <polygon points="200,20 340,90 320,240 200,340 80,240 60,90" fill="#0E191E" stroke="#6EE023" stroke-width="3" filter="url(#glow)"/>
+      <polygon points="200,60 300,120 280,220 200,300 120,220 100,120" fill="#13232A" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.5"/>
+      <!-- Inner Glowing Core Sensor -->
+      <polygon points="200,100 260,140 240,200 200,250 160,200 140,140" fill="url(#primaryGlow)" opacity="0.9" filter="url(#glow)"/>
+      <!-- Complex Topology Lines -->
+      <path d="M 200 20 L 200 340 M 60 90 L 340 90 M 80 240 L 320 240 M 100 120 L 300 120 M 120 220 L 280 220" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+      <path d="M 200 60 L 60 90 M 200 60 L 340 90 M 200 300 L 80 240 M 200 300 L 320 240" stroke="#6EE023" stroke-opacity="0.5" stroke-width="1.5"/>
+      <!-- Floating Energy Rings -->
+      <ellipse cx="200" cy="180" rx="160" ry="40" stroke="#6EE023" stroke-width="2" stroke-dasharray="8 6" opacity="0.7"/>
+      <ellipse cx="200" cy="200" rx="180" ry="45" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4 10" opacity="0.4"/>
+    </g>
+  
+
+  <!-- Technical Top Bar Overlay -->
+  <g transform="translate(60, 60)">
+    <rect x="0" y="0" width="160" height="26" rx="4" fill="#0E191E" stroke="#6EE023" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="14" cy="13" r="5" fill="#6EE023"/>
+    <text x="28" y="18" font-family="'Segoe UI', monospace" font-size="12" font-weight="700" fill="#FFFFFF" letter-spacing="1.5">ABRAHAM STUDIO</text>
+  </g>
+
+  <g transform="translate(960, 60)">
+    <text x="180" y="18" text-anchor="end" font-family="'Segoe UI', monospace" font-size="12" fill="#6EE023" letter-spacing="2">3D ASSET // MAYA & ZBRUSH</text>
+  </g>
+
+  <!-- Technical Coordinate Metadata Box (Bottom Left) -->
+  <g transform="translate(60, 690)">
+    <text x="0" y="0" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="0.5">BIOMECHANICAL EXOSKELETON</text>
+    <text x="0" y="24" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="14" fill="#6EE023" letter-spacing="1">HARD SURFACE 3D MODEL — Maya & ZBrush</text>
+    <text x="0" y="44" font-family="'Segoe UI', monospace" font-size="11" fill="#758B96" letter-spacing="1">VERTEX DENSITY: OPTIMIZED TOPOLOGY // 4K HIGH POLY TEXTURING</text>
+  </g>
+
+  <!-- Viewport HUD Overlay Box (Bottom Right) -->
+  <g transform="translate(980, 700)">
+    <rect x="0" y="0" width="160" height="42" rx="4" fill="#0C161B" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+    <text x="16" y="20" font-family="'Segoe UI', monospace" font-size="11" fill="#FFFFFF">RENDER ENGINE</text>
+    <text x="16" y="34" font-family="'Segoe UI', monospace" font-size="10" font-weight="700" fill="#6EE023">CYCLES / OCTANE</text>
+  </g>
+
+  <!-- Border Frame -->
+  <rect x="20" y="20" width="1160" height="760" rx="12" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+</svg>
